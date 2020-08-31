@@ -26,15 +26,45 @@ export default function tokenMiddleware(context) {
 
     try {
       req.user = {
-        _id: "default",
-        "emails": [
+        _id: "K5hgWPEXaXGH6dkKL",
+        services: {
+          password: {
+            bcrypt: "$2b$10$LG.pVhcIfif7UTT1fsZclubvytjtCX554n4hetxO7SqWqFvABgjf2"
+          },
+          resume: {
+            loginTokens: [
+              {
+                when: "2020-08-27T13:34:21.829Z",
+                hashedToken: "Zqv9Pz+R+aZe15ZYmMMjD2jJumSOvGsx3fGGHY3gDyY="
+              },
+              {
+                when: "2020-08-27T15:05:29.341Z",
+                hashedToken: "wdWlxauW9YJ5SLcL/NTgt16+TnDmTGIsbBl7dJjgsYQ="
+              },
+              {
+                when: "2020-08-27T15:05:36.135Z",
+                hashedToken: "hWrJSvgs1N5dYmHkg3tx2PTSe6KHv1eu3wCtwjedW1M="
+              }
+            ]
+          },
+          email: {
+            verificationTokens: [
+              {
+                token: "P-ffkv_92xGfSuI0bbm2l86TERpEJEssDr__BbPoeTd",
+                when: "2020-08-16T14:18:41.575Z",
+                address: "admin@localhost"
+              }
+            ]
+          }
+        },
+        emails: [
           {
-            "address": "admin@localhost",
-            "verified": true
+            address: "admin@localhost",
+            verified: false
           }
         ]
       };
-      //await getUserFromAuthToken(token, context);
+      // await getUserFromAuthToken(token, context);
       next();
     } catch (error) {
       Logger.error(error);

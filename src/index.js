@@ -25,5 +25,11 @@ export default async function register(app) {
         fn: tokenMiddleware
       }
     ]
+    // functionsByType: {
+    //   getHasPermissionFunctionForUser: [(context) => {
+    //     // console.log("Context  ", context);
+    //     return () => true;
+    //   }]
+    // }
   });
 }
